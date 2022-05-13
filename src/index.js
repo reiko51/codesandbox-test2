@@ -104,8 +104,40 @@
 // };
 // console.log(func3(10,20))
 
-const func3 = (num1, num2) => num1 + num2;
-console.log(func3(10, 20));
+// const func3 = (num1, num2) => num1 + num2;
+// console.log(func3(10, 20));
 
 // 従来の書き方とアロー関数ではjavascriptのthisの扱いが違ってくる！？
 // ここでは追求しない
+
+/**
+ * 分割代入
+ */
+// // オブジェクト
+// const myProfile = {
+//   name: "れいこ",
+//   age: 54,
+//   address: "愛知県春日井市"
+// };
+// // console.log(`名前は${myProfile.name}です。年齢は${myProfile.age}です。`);
+
+// // const { namew, agew } = myProfile;
+// // const message2 = `名前は${namew}です。年齢は${agew}です。`;
+// // console.log(message2);
+
+// const { name, age } = myProfile;
+// const message2 = `名前は${name}です。年齢は${age}です。`;
+// console.log(message2);
+
+// 配列
+const myProfile = ["れいこ", 54, "愛知県春日井市"];
+const message3 =
+  "名前は" + myProfile[0] + "です。年齢は" + myProfile[1] + "です。";
+console.log(message3);
+const message4 = `4: 名前は${myProfile[0]}です。年齢は${myProfile[1]}です。`;
+console.log(message4);
+const [name, age] = myProfile;
+const message5 = `5: 名前は${name}です。年齢は${age}です。`;
+console.log(message5);
+
+//特定の要素のみを取り出すにはどうしたらよいのだろう？？？？？？
