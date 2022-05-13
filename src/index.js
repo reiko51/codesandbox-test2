@@ -42,18 +42,70 @@
 // val4.address = "春日井市";
 // console.log(val4);
 
-const val5 = ["dog", "cat"];
-console.log(val5);
+// const val5 = ["dog", "cat"];
+// console.log(val5);
 
-//配列はconstも上書き可能
-val5[0] = "bird";
-console.log(val5);
+// //配列はconstも上書き可能
+// val5[0] = "bird";
+// console.log(val5);
 
-//配列はconstも再定義可能
-val5.push("monkey");
-console.log(val5);
+// //配列はconstも再定義可能
+// val5.push("monkey");
+// console.log(val5);
 
-/* 
-  Reactの開発ではオブジェクト、配列はconst
-  動的な変数としてはstateを使うことが多い
-*/
+// /*
+//   Reactの開発ではオブジェクト、配列はconst
+//   動的な変数としてはstateを使うことが多い
+// */
+
+// /**
+//  * テンプレート文字列
+//  */
+// const name = "れいこ";
+// const age = 54;
+// const message1 = "私の名前は" + name + "です。年齢は" + age + "です。";
+// console.log(message1);
+
+// const message2 = `私の名前は${name}です。年齢は${age}です.`;
+// console.log(message2);
+
+// // `はバッククワートっていうよ
+
+/**
+ * アロー関数
+ */
+//従来の関数
+// function func1(str){
+//   return str;
+// }
+// console.log(func1("func1です"))
+
+// const func1 = function (str) {
+//   return str;
+// };
+// console.log(func1("func1です。"));
+
+//アロー関数にすると
+// const func2 = (str) => {
+//   return str;
+// }
+// console.log(func2("func2です。"));
+
+// const func2 = str => {
+//   return str;
+// }
+// console.log(func2("func2です"));
+
+//  const func2 = (str) => str;
+//  console.log(func2("func2です"));
+
+// const func3 = (num1, num2) => {
+//   return num1 + num2;
+// };
+// console.log(func3(10,20))
+
+const func3 = (num1, num2) => num1 + num2;
+console.log(func3(10, 20));
+
+// 従来の書き方とアロー関数ではjavascriptのthisの扱いが違ってくる！？
+// ここでは追求しない
