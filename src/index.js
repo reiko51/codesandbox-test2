@@ -190,3 +190,66 @@ const arr6 = [...arr4]; //参照元の値だけをコピー
 // console.log(arr8);
 // const message6 = `arr4: ${arr4}です`;
 // console.log(message6);
+
+/**
+ * mapやfilterを使った配列の管理
+ */
+const nameArr = ["田中", "山田", "れいこ"];
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(`${index + 1}番目は${nameArr[index]}です`);
+// }
+
+//ちょっと復習
+// const [name1, name2, name3] = nameArr;
+// const nameDsp = (nm1, nm2, nm3) => {
+// console.log(nm1);
+// console.log(nm2);
+// console.log(nm3);
+// }
+// // nameDsp(name1, name2, name3);
+// nameDsp(...nameArr);
+
+//map
+// const nameArr2 = nameArr.map((name)=>{return name;})
+// console.log(nameArr2);
+
+//nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です。`));
+nameArr.map((name) => console.log(`名前は${name}です。`));
+
+//fillter
+//const numArr = [1,2,3,4,5];
+// const newNumArr = numArr.filter((num)=>{
+//   return num % 2 ===1;
+// });
+// console.log(newNumArr);numArr.filter((num, index) => console.log(`${index + 1}番目は${name}です。`));
+
+//map
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "れいこ") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+// console.log(newNameArr);
+
+//????なんかエラーがでる↓配列のメソッドのコールバックで return 文を強制的に実行します。
+nameArr.map((name) => {
+  if (name === "れいこ") {
+    console.log(name);
+  } else {
+    console.log(`${name}ちゃん`);
+  }
+});
+
+// mapを使わないで書くと？？
+// const nameFunc = (name) => {
+//   if (name === "れいこ") {
+//     console.log(name);
+//   } else {
+//     console.log(`${name}さま`);
+//   }
+// };
+// for (let index =0; index < nameArr.length; index++){
+//   nameFunc(nameArr[index]);
+// };
