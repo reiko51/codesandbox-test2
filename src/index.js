@@ -214,7 +214,7 @@ const nameArr = ["田中", "山田", "れいこ"];
 // console.log(nameArr2);
 
 //nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です。`));
-nameArr.map((name) => console.log(`名前は${name}です。`));
+// nameArr.map((name) => console.log(`名前は${name}です。`));
 
 //fillter
 //const numArr = [1,2,3,4,5];
@@ -234,13 +234,14 @@ nameArr.map((name) => console.log(`名前は${name}です。`));
 // console.log(newNameArr);
 
 //????なんかエラーがでる↓配列のメソッドのコールバックで return 文を強制的に実行します。
-nameArr.map((name) => {
-  if (name === "れいこ") {
-    console.log(name);
-  } else {
-    console.log(`${name}ちゃん`);
-  }
-});
+// nameArr.map((name) => {
+//   if (name === "れいこ") {
+//     console.log(name);
+//   } else {
+//     console.log(`${name}ちゃん`);
+//   }
+// });
+nameArr.map((name) => console.log(name));
 
 // mapを使わないで書くと？？
 // const nameFunc = (name) => {
@@ -253,3 +254,13 @@ nameArr.map((name) => {
 // for (let index =0; index < nameArr.length; index++){
 //   nameFunc(nameArr[index]);
 // };
+
+// 自習
+const numbers = [0, 1, 2, 3, 4, 5, 6];
+// const doubledNumbers = numbers.map(function(n) {
+//   return n * 2;
+// });
+const doubledNumbers2 = numbers.map((n) => {
+  return n * 2;
+});
+console.log(doubledNumbers2); // [0, 2, 4, 6, 8, 10, 12]
