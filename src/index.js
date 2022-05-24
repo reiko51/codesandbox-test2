@@ -150,7 +150,7 @@
  * スプレッド構文...
  */
 //配列の展開
-const arr1 = [1, 2];
+// const arr1 = [1, 2];
 // console.log(arr1);
 // console.log(...arr1); //配列の中身を順番に処理して展開してくれる
 
@@ -167,9 +167,9 @@ const arr1 = [1, 2];
 
 //配列のコピー、結合
 
-const arr4 = [10, 20];
-const arr5 = [30, 40];
-const arr6 = [...arr4]; //参照元の値だけをコピー
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
+// const arr6 = [...arr4]; //参照元の値だけをコピー
 // arr6[0] = 100;
 // console.log(`arr6:${arr6}`);
 // console.log(`arr4:${arr4}`);
@@ -194,7 +194,7 @@ const arr6 = [...arr4]; //参照元の値だけをコピー
 /**
  * mapやfilterを使った配列の管理
  */
-const nameArr = ["田中", "山田", "れいこ"];
+// const nameArr = ["田中", "山田", "れいこ"];
 // for (let index = 0; index < nameArr.length; index++) {
 //   console.log(`${index + 1}番目は${nameArr[index]}です`);
 // }
@@ -241,7 +241,7 @@ const nameArr = ["田中", "山田", "れいこ"];
 //     console.log(`${name}ちゃん`);
 //   }
 // });
-nameArr.map((name) => console.log(name));
+// nameArr.map((name) => console.log(name));
 
 // mapを使わないで書くと？？
 // const nameFunc = (name) => {
@@ -256,11 +256,38 @@ nameArr.map((name) => console.log(name));
 // };
 
 // 自習
-const numbers = [0, 1, 2, 3, 4, 5, 6];
-// const doubledNumbers = numbers.map(function(n) {
+// const numbers = [0, 1, 2, 3, 4, 5, 6];
+// // const doubledNumbers = numbers.map(function(n) {
+// //   return n * 2;
+// // });
+// const doubledNumbers2 = numbers.map((n) => {
 //   return n * 2;
 // });
-const doubledNumbers2 = numbers.map((n) => {
-  return n * 2;
-});
-console.log(doubledNumbers2); // [0, 2, 4, 6, 8, 10, 12]
+// console.log(doubledNumbers2); // [0, 2, 4, 6, 8, 10, 12]
+
+/**
+ * 三項演算子
+ */
+// ある条件　？　条件がTRUEのとき：　条件がFALSEの時
+// const val1 = 1 > 0 ? 'trueです' : 'falseです';
+// console.log(val1);
+
+// // const num = 1300;
+// const num = "1300";
+
+// console.log(num.toLocaleString());
+
+// const formattedNum =
+//   typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
+// console.log(formattedNum);
+
+const arr1 = [50, 60];
+const checkSum = (num1, num2) => {
+  return num1 + num2 > 100 ? "100を超えています！" : "許容範囲内です";
+};
+// console.log(checkSum(50, 60));
+console.log(checkSum(...arr1));
+
+// const sumFunc = (num1, num2) => console.log(num1+num2);
+// sumFunc(arr1[0], arr1[1]);
+// sumFunc(...arr1);
