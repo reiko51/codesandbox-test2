@@ -9,23 +9,23 @@
 // var val1 = "val1再定義";
 // console.log(val1);
 
-// let val2 = "let変数"
+// let val2 = "let変数";
 // console.log(val2);
 
 // //let上書き
 // val2 = "val2上書き";
 // console.log(val2);
 
-// //lat再定義
+// //lat上書きはできるが再定義できない
 // let val2 = "val2再定義";
 
 // const val3 = "const変数";
 // console.log(val3);
 
-// //const上書き
+// //const上書きできない
 // val3 = "const上書き";
 
-// //const再定義
+// //const再定義もできない
 // const val3 = "const再定義";
 
 // const val4 = {
@@ -269,10 +269,10 @@
  * 三項演算子
  */
 // ある条件　？　条件がTRUEのとき：　条件がFALSEの時
-// const val1 = 1 > 0 ? 'trueです' : 'falseです';
+// const val1 = 1 > 0 ? "trueです" : "falseです";
 // console.log(val1);
 
-// // const num = 1300;
+//const num = 1300;
 // const num = "1300";
 
 // console.log(num.toLocaleString());
@@ -281,13 +281,50 @@
 //   typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
 // console.log(formattedNum);
 
-const arr1 = [50, 60];
-const checkSum = (num1, num2) => {
-  return num1 + num2 > 100 ? "100を超えています！" : "許容範囲内です";
-};
-// console.log(checkSum(50, 60));
-console.log(checkSum(...arr1));
+// const arr1 = [50, 60];
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? "100を超えています！" : "許容範囲内です";
+// };
+// // console.log(checkSum(50, 60));
+// console.log(checkSum(...arr1));
 
 // const sumFunc = (num1, num2) => console.log(num1+num2);
 // sumFunc(arr1[0], arr1[1]);
 // sumFunc(...arr1);
+
+/**
+ * 論理演算子の本当の意味を知ろう
+ */
+// const flag1 = true;
+// const flag2 = true;
+
+// if (flag1 || flag2) {
+//   console.log("1か2はtrueになります");
+// }
+
+// if (flag1 && flag2) {
+//   console.log("1も2もtrueになります");
+// }
+
+// || は左側がfalseなら右を返す
+// const num = null;  //numがnullとはfalseの状態
+// const num = 100;
+// const fee = num || "金額未設定です"
+// console.log(fee);
+// &&は左側がtrueなら右を返す
+// const num2 = null;
+// //const num2 = 100;
+// const fee2 = num2 && "何か設定されました"
+// console.log(fee2);
+
+// 三項演算子と論理演算子で書いてみた
+// const num = null;
+const num = 1500;
+// const formattedNum =
+// typeof num === "number" ? num.toLocaleString() : "数字を入力してね"
+// console.log(formattedNum);
+console.log(num);
+const formattednum2 = num || "数字を入力してね";
+console.log(formattednum2);
+const formattednum3 = num && "数字が入力されました";
+console.log(formattednum3);
